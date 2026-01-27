@@ -1,5 +1,17 @@
-datetime_columns:
+columns_datetime:
 - tanggal
+columns_int:
+- pm10
+- pm25
+- so2
+- co
+- o3
+- no2
+- max
+columns_object:
+- stasiun
+- critical
+- category
 features:
 - stasiun
 - pm10
@@ -8,26 +20,11 @@ features:
 - co
 - o3
 - no2
-int32_columns:
-- pm10
-- pm25
-- so2
-- co
-- o3
-- no2
-- max
-label: categori
+label: category
 label_categories:
 - BAIK
 - SEDANG
 - TIDAK SEHAT
-label_categories_new:
-- BAIK
-- TIDAK BAIK
-object_columns:
-- stasiun
-- critical
-- categori
 path_joined_data: ../data/interim/joined_dataset.pkl
 path_raw_data: ../data/raw/
 path_test_set:
