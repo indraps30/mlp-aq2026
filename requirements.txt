@@ -1,3 +1,4 @@
+fastapi[standard]
 imblearn
 joblib
 matplotlib
@@ -7,3 +8,5 @@ pyyaml
 scikit-learn
 scipy
 seaborn
+streamlit
+uvicorn
