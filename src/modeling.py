@@ -307,6 +307,8 @@ def main():
     best_name = performances["model_name"][0]
     best_model = trained_models[best_name][0]
 
+    print(f"Best Model : {best_name}")
+
     # 4. Model Serialization.
     PATH_PRODUCTION_MODEL = config["path_production_model"]
     serialize_data(best_model, PATH_PRODUCTION_MODEL)

@@ -79,4 +79,5 @@ def predict(data: DataAPI):
 if __name__ == "__main__":
     # Run uvicorn server.
     # host="0.0.0.0" -> localhost
+    # From api.py get FastAPI object (app).
     uvicorn.run("api:app", host="0.0.0.0", port=8080)
