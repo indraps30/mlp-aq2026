@@ -4,7 +4,7 @@ services:
     build:          # "where is the Dockerfile location?"
       context: .    # in root directory
       dockerfile: ./docker/ui/Dockerfile
-    image: indraps30/ui_aq  # Docker_Hub_Username/Docker_Image_Name
+    image: indraps30/ac_streamlit  # Docker_Hub_Username/Docker_Image_Name
     container_name: frontend_aq
     depends_on:
       - api         # UI service only run after API service.
@@ -15,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/api/Dockerfile
-    image: indraps30/api_aq
+    image: indraps30/ac_api
     container_name: backend_aq
     ports:
       - "8080:8080"
