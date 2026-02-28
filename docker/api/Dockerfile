@@ -6,7 +6,7 @@ FROM python:3.12-slim
 WORKDIR /home
 
 # Copy anything needed to Docker container.
-COPY ./requirements.txt
+COPY ./requirements.txt ./
 COPY ./src ./src/
 COPY ./models ./models/
 COPY ./config ./config/

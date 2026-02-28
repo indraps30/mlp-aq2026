@@ -549,7 +549,7 @@ def label_balancer(X, y, balancer_type, config, random_state=123):
 # Main function.
 def main():
     # 1. Load configuration file.
-    config = load_config(PATH_CONFIG)
+    config = load_config()
 
     # 2. Load each set of data.
     data_train, data_valid, data_test = load_data(config)

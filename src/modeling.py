@@ -292,7 +292,7 @@ def training_log_to_df(training_log):
 # Main function.
 def main():
     # 1. Load configuration file.
-    config = load_config(PATH_CONFIG)
+    config = load_config()
 
     # 2. Model Fit & Tune (CV + HT).
     models = create_model_object()

@@ -256,7 +256,7 @@ def split_train_test(X, y, test_size, random_state):
 # Main function.
 def main():
     # 1. Load configuration file.
-    config = load_config(PATH_CONFIG)
+    config = load_config()
 
     # 2. Load the raw dataset.
     PATH_DATA_RAW = config["path_data_raw"]
