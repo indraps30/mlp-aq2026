@@ -2,8 +2,10 @@ fastapi[standard]
 imblearn
 joblib
 matplotlib
+mkdocs
 numpy
 pandas
+pytest
 pyyaml
 scikit-learn
 scipy
