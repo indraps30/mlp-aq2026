@@ -11,7 +11,7 @@ PATH_CONFIG = "../config/config.yaml"
 PATH_IMAGE = "assets/header_images.jpg"
 
 
-# config = utils.load_config()
+config = utils.load_config()
 
 
 # Load images in the header.
@@ -37,52 +37,52 @@ with st.form(key = "air_data_form"):
     )
 
     # Create box for number input.
-    # range_pm10 = config["range_pm10"]
+    min_pm10, max_pm10 = int(config["range_pm10"][0] + 1), int(config["range_pm10"][1])
     pm10 = st.number_input(
         label = "2.\tEnter pm10 Value:",
-        min_value = 0,
-        max_value = 179,
-        help = f"Value range from 0 to 179"
+        min_value = min_pm10,
+        max_value = max_pm10,
+        help = f"Value range from {min_pm10} to {max_pm10}"
     )
 
-    # range_pm25 = config["range_pm25"]
+    min_pm25, max_pm25 = int(config["range_pm25"][0] + 1), int(config["range_pm25"][1])
     pm25 = st.number_input(
         label = "3.\tEnter pm25 Value:",
-        min_value = 0,
-        max_value = 174,
-        help = f"Value range from 0 to 174"
+        min_value = min_pm25,
+        max_value = max_pm25,
+        help = f"Value range from {min_pm25} to {max_pm25}"
     )
 
-    # range_so2 = config["range_so2"]
+    min_so2, max_so2 = int(config["range_so2"][0] + 1), int(config["range_so2"][1])
     so2 = st.number_input(
         label = "4.\tEnter so2 Value:",
-        min_value = 0,
-        max_value = 82,
-        help = f"Value range from 0 to 82"
+        min_value = min_so2,
+        max_value = max_so2,
+        help = f"Value range from {min_so2} to {max_so2}"
     )
 
-    # range_co = config["range_co"]
+    min_co, max_co = int(config["range_co"][0] + 1), int(config["range_co"][1])
     co = st.number_input(
         label = "5.\tEnter co Value:",
-        min_value = 0,
-        max_value = 47,
-        help = f"Value range from 0 to 47"
+        min_value = min_co,
+        max_value = max_co,
+        help = f"Value range from {min_co} to {max_co}"
     )
 
-    # range_o3 = config["range_o3"]
+    min_o3, max_o3 = int(config["range_o3"][0] + 1), int(config["range_o3"][1])
     o3 = st.number_input(
         label = "6.\tEnter o3 Value:",
-        min_value = 0,
-        max_value = 151,
-        help = f"Value range from 0 to 151"
+        min_value = min_o3,
+        max_value = max_o3,
+        help = f"Value range from {min_o3} to {max_o3}"
     )
 
-    # range_no2 = config["range_no2"]
+    min_no2, max_no2 = int(config["range_no2"][0] + 1), int(config["range_no2"][1])
     no2 = st.number_input(
         label = "7.\tEnter no2 Value:",
-        min_value = 0,
-        max_value = 65,
-        help = f"Value range from 0 to 65"
+        min_value = min_no2,
+        max_value = max_no2,
+        help = f"Value range from {min_no2} to {max_no2}"
     )
 
     # Create button to submit the form.
@@ -113,6 +113,3 @@ with st.form(key = "air_data_form"):
                 st.error("Predicted Air Quality: TIDAK BAIK.")
             else:
                 st.success("Predicted Air Quality: BAIK.")
-
-                
-
